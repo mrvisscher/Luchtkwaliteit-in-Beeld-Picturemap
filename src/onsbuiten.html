@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://www.cameradeals.nl/wp-content/uploads/2019/10/cropped-Camera-Deals-Logo-only-favicon-2-png-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Luchtkwaliteit in Beeld</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const settings = {
+        suggests: true,
+        suggestId: "onsbuiten",
+        uploads: false,
+        //either "mouse" or "pulse"
+        dynamics: "pulse",
+        title: "Waar is luchtkwaliteit belangrijk voor jou?"
+      }
+    </script>
+    <script type="module" src="./main.jsx"></script>
+  </body>
+</html>

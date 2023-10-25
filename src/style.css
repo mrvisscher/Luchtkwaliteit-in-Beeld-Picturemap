@@ -1,0 +1,234 @@
+@import "../node_modules/ol/ol.css";
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  overflow: hidden;
+  background-color: #262626;
+}
+
+/*Map Styling*/
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.stamen-map {
+  filter: invert(1);
+}
+.osm-map {
+  filter:grayscale(1) invert(1);
+}
+
+/*Basic Interace*/
+.full-blur {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  overflow-y: scroll;
+  z-index: 2;
+}
+
+.wrapper, .wrapper-10{
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
+  max-width: 600px;
+  flex-direction: column;
+}
+
+.wrapper{
+  gap: 30px;
+}
+
+.wrapper-10{
+  gap: 10px;
+}
+
+.float-textbox{
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+}
+
+.float-box{
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.button{
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  color: black;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+}
+
+/*Menu Bar Specific Styling */
+.menu-bar {
+  display: flex;
+  gap:10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 20px 10px 20px;
+  z-index: 1;
+}
+
+/*Gallery Specific Styling*/
+.image-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.meta-wrapper{
+  display: flex;
+  gap:10px;
+}
+
+.small-fit{
+  text-wrap: nowrap;
+  height: fit-content;
+}
+
+/*Upload Form Specific Styling*/
+.upload-form-card{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.upload-form-card input{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.upload-form-card textarea{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.upload-form-card input.text-input{
+  border-style: solid;
+  border-radius: 0;
+  border-color: black;
+}
+
+/*Info Screen Specific Styling*/
+.wrapper h1, .wrapper p, .wrapper h2, .wrapper h3, .wrapper h4  {
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4   {
+  width: fit-content;
+}
+
+.wrapper p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.inverse{
+  background-color: black !important;
+  color: white !important;
+}
+
+.transparent{
+  background: transparent !important;
+  color: white !important;
+}
+
+/*Pop-Up Specific Styling*/
+.pop-up{
+  width: 215px;
+  text-align: center;
+}
+
+.pop-up-spacer{
+  height:70px;
+}
+
+.pop-up-spacer-90{
+  height:90px;
+}
+
+.yn-wrapper{
+  display: flex;
+  gap:10px;
+  justify-content: space-evenly;
+}
+
+.yn-wrapper .button{
+  width: 30px;
+}
+
+/*Suggest Mobile Specific Styling*/
+.mobile{
+  padding: 20px;
+}
+
+.question div{
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  font-size:larger;
+}
+
+.question input, .question textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.title {
+  background-color: white;
+  padding: 10px 40px 10px 40px;
+  font-size: xx-large;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  width: fit-content;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.subtitle {
+  background-color: white;
+  padding: 5px 30px 5px 30px;
+  font-size: x-large;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  width: fit-content;
+  text-align: center;
+  white-space: nowrap;
+}
