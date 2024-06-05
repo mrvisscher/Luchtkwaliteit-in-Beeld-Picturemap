@@ -16,6 +16,10 @@
         "destination": "/onsbuiten.html"
       },
       {
+        "source": "/kennisfestival",
+        "destination": "/kennisfestival.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
