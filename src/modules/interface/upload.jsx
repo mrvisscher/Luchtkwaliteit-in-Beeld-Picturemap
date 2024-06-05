@@ -13,7 +13,7 @@ export function UploadForm({uploadEvent, mapHandler, returnBase}){
     return(
         <ScreenWrapper returnBase={returnBase}>
             <div className="upload-form-card">
-                Photographer name:
+                Photography team members / Photographer:
                 <input className="text-input" id="upload-input-photographer" type="text" placeholder="Photographer"/>
                 PM25 value of the picture:
                 <input className="text-input" id="upload-input-pm25" type="text" placeholder="PM25"/>

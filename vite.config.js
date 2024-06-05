@@ -37,7 +37,8 @@ export default defineConfig({
         main: resolve(__dirname, './src/index.html'),
         nvo: resolve(__dirname, './src/nvo.html'),
         suggest: resolve(__dirname, './src/suggest.html'),
-        onsbuiten: resolve(__dirname, './src/onsbuiten.html')
+        onsbuiten: resolve(__dirname, './src/onsbuiten.html'),
+        kennisfestival: resolve(__dirname, './src/kennisfestival.html'),
       },
     },
     outDir: '../dist'

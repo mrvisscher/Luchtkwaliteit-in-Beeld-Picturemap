@@ -9,7 +9,7 @@ const stamenLayer = new TileLayer({
     className: 'stamen-map',
     source: new StadiaMaps({
         layer: 'stamen_toner_lite',
-        retina: true,
+        retina: true
       }),
 })
 
