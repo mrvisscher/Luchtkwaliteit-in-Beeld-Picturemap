@@ -28,6 +28,9 @@ export function Map({openUpload, openGallery}){
 
     function contextMenuCallback(clickEvent){
         clickEvent.preventDefault()
+
+        if (settings.uploads == false){return}
+
         setClick({event:clickEvent})
         setMapStatus("upload")
     }
@@ -64,7 +67,7 @@ export function Map({openUpload, openGallery}){
         setSuggestData(data)
         setPopUpStatus("information")
 
-        handler.suggestions.box.setPosition(event.coordinate)
+        handler.box.setPosition(event.coordinate)
     }
 
     function returnBase(){
