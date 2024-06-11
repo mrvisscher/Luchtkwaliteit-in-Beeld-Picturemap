@@ -21,138 +21,8 @@ import { styles } from './styles.js';
 import { ImagePoints } from './points.js';
 
 import { LKIBMap } from './lkibmap.js';
-/*
-//Point Layer
-const pointCollection = new Collection([])
+import spot from '../../assets/spot.png'
 
-export async function loadPoints(){
-
-  let pointList = await getPointList("points")
-  //Extract data from each database-node and put into feature colection
-  pointList.forEach(function(point){
-    let feature = new Feature({
-      geometry: new Point([point.data.x, point.data.y], "xy")
-    })
-    feature.setId(point.id)
-    const randomRotation = Math.random() * 6
-    feature.setStyle(  new Style({
-      image: new Icon({
-        src: "/assets/spot.png",
-        scale: 0.2,
-        rotation: randomRotation
-      })
-    }),)
-    
-    //console.log(styler)
-    pointCollection.push(feature)
-    if(settings.dynamics == "pulse"){
-      const styler = new LedStyler(feature)
-    }
-  })
-}
-
-const pointLayer = new VectorLayer({
-  source: new VectorSource({
-    features: pointCollection
-  }),
-})
-
-export function pointLayerFilter(candidate){
-  if (candidate != pointLayer){return false}
-  else {return true}
-}
-
-//Suggest Layer
-const suggestsCollection = new Collection([])
-
-async function loadSuggests(){
-  let pointList = await getPointList("suggestions/suggestions/" + settings.suggestId)
-
-  pointList.forEach(function(point){
-    let feature = new Feature({
-      geometry: new Point([point.data.x, point.data.y], "xy")
-    })
-    feature.setId(point.id)
-    let text = point.data.why
-    if(text != "" && text != undefined){
-      feature.setStyle(styles[2])      
-    }
-    else {
-      feature.setStyle(styles[1])
-    }
-    
-       
-    //console.log(styler)
-    suggestsCollection.push(feature)
-
-  })
-}
-
-export async function refreshSuggests(){
-  console.log("refreshing suggests")
-  const length = suggestsCollection.getLength()
-  
-  for(let i = 1; i < 5; i++){
-    try{
-      let feature = suggestsCollection.getArray()[length - i]
-      let text = await getSuggestData(feature.getId(), 'why')
-      if(text != "" && text != undefined){
-        feature.setStyle(styles[2])      
-      }
-      else {
-        feature.setStyle(styles[1])
-      }
-    }
-    catch(error){console.log(error)}
-  }
-
-}
-
-const suggestLayer = new VectorLayer({
-  source: new VectorSource({
-    features: suggestsCollection
-  })
-})
-
-export const popUp = new Overlay({
-  position: [500166, 6828934],
-  positioning: 'top-center',
-  offset: [0,-75]
-});
-
-export function addSuggest(event){
-  let feature = new Feature({
-    geometry: new Point(event.coordinate, "xy")
-  })
-
-  feature.setStyle(styles[3])
-
-  suggestsCollection.push(feature)
-  movePopUp(event.coordinate)
-}
-
-export function removeSuggest(){
-  suggestsCollection.pop()
-}
-
-export function movePopUp(coords){
-  popUp.setPosition(coords)
-}
-
-export async function confirmSuggest(){
-  const feature = suggestsCollection.item(suggestsCollection.getLength() - 1)
-  feature.setStyle(styles[1])
-  const coords = feature.getGeometry().getCoordinates()
-  const ref = await uploadSuggest(coords)
-  feature.setId(ref)
-  return ref
-}
-
-export function suggestLayerFilter(candidate){
-  if (candidate != suggestLayer){return false}
-  else {return true}
-}
-*/
 //Stamen Layer
 const stamenLayer = new TileLayer({
   className: 'stamen-map',
@@ -192,7 +62,7 @@ function scaleFeature(mouseCoords, feature){
   //Create the new style
   let style = new Style({
     image: new Icon({
-      src: "/assets/spot.png",
+      src: spot,
       scale: scale
     }),
   })

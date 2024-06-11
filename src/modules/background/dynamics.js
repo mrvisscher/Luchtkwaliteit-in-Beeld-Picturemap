@@ -1,4 +1,5 @@
 import {Style, Icon} from 'ol/style.js';
+import spot from '../../assets/spot.png'
 
 //================== Changing Cursor Based on features
 export function changeCursor(map, event){
@@ -40,7 +41,7 @@ function scaleFeature(mouseCoords, feature){
     //Create the new style
     let style = new Style({
       image: new Icon({
-        src: "/assets/spot.png",
+        src: spot,
         scale: scale
       }),
     })

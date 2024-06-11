@@ -1,5 +1,6 @@
 import {Circle, Fill, Stroke, Style} from 'ol/style.js';
 import Icon from 'ol/style/Icon.js';
+import spot from '../../assets/spot.png'
 
 const fill = new Fill({
     color: 'rgba(255,255,255,0.4)',
@@ -23,7 +24,7 @@ const blueStroke = new Stroke({
 export const styles = [
     new Style({
         image: new Icon({
-        src: "/assets/spot.png",
+        src: spot,
         scale: 0.2
         }),
         fill: fill,

@@ -10,6 +10,7 @@ import { getPointList, uploadSuggest } from '../database/firebase';
 import { Pulser } from './dynamics';
 import { styles } from './styles';
 
+import spot from '../../assets/spot.png'
 
 class LKIBPoints {
     collection = new Collection([])
@@ -50,7 +51,7 @@ export class ImagePoints extends LKIBPoints {
         const feature = new Feature({geometry:geometry})
         
         const image = new Icon({
-            src: "/assets/spot.png",
+            src: spot,
             scale: 0.2,
             rotation: Math.random() * 6
         })
