@@ -66,7 +66,6 @@ function ImageContainer({imageId, mapHandler, returnBase}){
                 {pm25 != "" && <div className="float-textbox small-fit">PM25: {pm25}</div>}
                 {date != "" && <div className="float-textbox small-fit">{date}</div>}
             </div>
-            {owned && <div className="meta-wrapper"><div className="button" onClick={deleteImage}>Verwijder Foto</div></div>}
         </div>
     )
 }
