@@ -39,6 +39,7 @@ export default defineConfig({
         suggest: resolve(__dirname, './src/suggest.html'),
         onsbuiten: resolve(__dirname, './src/onsbuiten.html'),
         kennisfestival: resolve(__dirname, './src/kennisfestival.html'),
+        "3ou": resolve(__dirname, './src/3ou.html'),
       },
     },
     outDir: '../dist'

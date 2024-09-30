@@ -20,6 +20,10 @@
         "destination": "/kennisfestival.html"
       },
       {
+        "source": "/3ou",
+        "destination": "/3ou.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
